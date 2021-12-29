@@ -8,7 +8,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { CountriesComponent } from './countries/countries.component';
 import { NavbarComponent } from './home/navbar/navbar.component';
 import { CategoryComponent } from './home/category/category.component';
 
@@ -19,7 +18,6 @@ import { CategoryComponent } from './home/category/category.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    CountriesComponent,
     NavbarComponent,
     CategoryComponent,
   ],
