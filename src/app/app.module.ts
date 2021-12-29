@@ -8,12 +8,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { CountriesComponent } from './countries/countries.component';
+import { NavbarComponent } from './home/navbar/navbar.component';
+import { CategoryComponent } from './home/category/category.component';
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    CountriesComponent,
+    NavbarComponent,
+    CategoryComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,6 +31,7 @@ import { HomeComponent } from './home/home.component';
     CommonModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    
     
   ],
   providers: [],

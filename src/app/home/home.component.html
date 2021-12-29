@@ -1,23 +1,17 @@
+<app-navbar [sports] = "sports" (idEmit) = "changeSport($event)"></app-navbar>
+<app-category [categories2] = "categories" ></app-category>
 
-<div class="container-sm">
 
-    <div class="row">
-        <div class="col" *ngIf = "sports.length">
-          <ng-container *ngFor = "let sport of sports">
-                  <button type="button" class="btn btn-light">{{sport.name}}</button>
-          </ng-container>
-          </div>
-    </div>
 
     <div class="row">
         <div class="col">
-          Column
+          <!-- country select -->
+          <button type="button" class="btn btn-primary" (click)= "show()">Primary</button>
         </div>
         <div class="col">
-          Column
+          liga
         </div>
         <div class="col">
-          Column
+
         </div>
-      </div>
   </div>

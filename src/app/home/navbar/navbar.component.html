@@ -1,0 +1,35 @@
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://i.pinimg.com/474x/6d/92/a8/6d92a8a78be4b2dd866a0d81d47e3388.jpg" alt="" width="60" height="48" class="d-inline-block align-text-top">
+        Live Score
+      </a>
+      <img src="https://www.soccerstand.tips/livescore/assets/images/banner.png" height="200" class="rounded mx-auto d-block" alt="...">
+    </div>
+  </nav>
+  <div class="container">
+
+    <div class="row" *ngIf = "sports.length">
+      <div class="col"  *ngFor = "let sport of sports | slice:0:7 ">
+        <ng-container>
+          <button type="button" class="btn btn-outline-success" (click) = "getIdFromButton(sport.id)"> {{sport.name}}</button>
+        </ng-container>
+            
+              <!-- Dropdown menu -->
+   
+  
+      </div>
+      <div class="col">
+        <ng-container class="dropdown">
+  
+          <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Other sports
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"   >
+            <ng-container *ngFor="let sport of sports | slice: 7 : sports.length">                
+              <li><a class="dropdown-item" href="#" (click) = "getIdFromButton(sport.id)" >{{sport.name}}</a></li>
+                </ng-container>
+           </ul>
+              </ng-container>
+      </div>
+    </div>
