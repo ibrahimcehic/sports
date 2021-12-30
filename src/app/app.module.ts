@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './home/navbar/navbar.component';
 import { CategoryComponent } from './home/category/category.component';
 import { CompetitionComponent } from './home/competition/competition.component';
+import { CompetitionDetailsComponent } from './home/competition-details/competition-details.component';
 
 
 
@@ -22,6 +23,7 @@ import { CompetitionComponent } from './home/competition/competition.component';
     NavbarComponent,
     CategoryComponent,
     CompetitionComponent,
+    CompetitionDetailsComponent,
   ],
   imports: [
     BrowserModule,

@@ -14,11 +14,11 @@
           <!-- country select -->
             <app-category [categories2] = "categories" (idCategory) = "competition($event)"></app-category>
         </div>
-        <div class="col">
+        <div class="col-3">
           <app-competition [competitions]  = "competitions"> </app-competition>
         </div>
         <div class="col">
-            
+            <app-competition-details></app-competition-details>
         </div>
   </div>
 

@@ -3,8 +3,6 @@ import { ICatergory } from 'src/app/shared/models/category';
 import { EventEmitter } from '@angular/core';
 
 
-
-
 @Component({
   selector: 'app-category',
   templateUrl: './category.component.html',

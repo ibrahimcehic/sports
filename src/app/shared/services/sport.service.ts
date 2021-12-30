@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { ISport } from '../models/sport';
 import { ICatergory } from '../models/category';
 import { ICompetition } from '../models/competition';
+import { ICompDet } from '../models/competition-details';
 
 @Injectable({
   providedIn: 'root'
@@ -20,5 +21,8 @@ export class SportService {
 
   getCompetition(idC: number): Observable<ICompetition[]>{
     return this.http.get<ICompetition[]>(this.url + '/Competition/category/' + idC)
+  }
+  getCompetitionDetais(idComDet: number): Observable<ICompDet[]>{
+    return this.http.get<ICompDet[]>(this.url + '/Competitor/competition/' + idComDet)
   }
 }
