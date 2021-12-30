@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './home/navbar/navbar.component';
 import { CategoryComponent } from './home/category/category.component';
+import { CompetitionComponent } from './home/competition/competition.component';
 
 
 
@@ -20,6 +21,7 @@ import { CategoryComponent } from './home/category/category.component';
     HomeComponent,
     NavbarComponent,
     CategoryComponent,
+    CompetitionComponent,
   ],
   imports: [
     BrowserModule,

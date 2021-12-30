@@ -1,13 +1,6 @@
-<p>category works!</p>
 
-<ng-container class="dropdown">
-  
-  <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-      Other sports
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"   >
-    <ng-container *ngFor="let category of categories2">                
-      <li><a class="dropdown-item" href="#" >{{category.name}}</a></li>
-        </ng-container>
-   </ul>
-      </ng-container> 
+      <div class="list-group" *ngFor="let category of categories2">
+        <button type="button" class="list-group-item list-group-item-action" aria-current="true">
+          {{category.name}}
+        </button>
+      </div>
