@@ -22,7 +22,7 @@ categories: ICatergory[] = [];
   }
 
   getIdFromButton(id: number){
-      console.log('id', id)
+      console.log('idSport', id)
     
     this.idEmit.emit(id);
    
