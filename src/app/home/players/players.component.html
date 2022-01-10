@@ -1,0 +1,59 @@
+<p class="text-center">Players</p>
+<div class="list-group" *ngFor="let player of players">
+  <button type="button" class="list-group-item list-group-item-action" aria-current="true" (click)="show(player.id, modal)" (click) = "GetCountryId(player.countryID)">
+    {{player.name}}
+  </button>
+</div>
+
+     
+<!--see the template reference-->
+<div #modal class="modal fade" tabindex="-1" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+        <div class="modal-body" *ngIf="player">
+         
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                ID
+              </div>
+              <div class="col">
+                {{player.id}}
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                Name
+              </div>
+              <div class="col">
+                {{player.name}}
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                Coutry
+              </div>
+              <div class="col" *ngIf = "country">
+                {{country.name}}
+              </div>
+            </div>
+
+          </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+ </div>
+</div>
+
+

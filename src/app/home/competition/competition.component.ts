@@ -1,6 +1,8 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { ICompetition } from 'src/app/shared/models/competition';
 import { EventEmitter } from '@angular/core';
+import { ICompDet } from 'src/app/shared/models/competition-details';
+
 
 @Component({
   selector: 'app-competition',
@@ -11,8 +13,11 @@ export class CompetitionComponent implements OnInit {
   
 
 @Input() competitions: ICompetition[] = [];
-@Output() idComp = new EventEmitter;
+@Input() comDetails: ICompDet[] = [];
+@Output() compId = new EventEmitter;
+@Output() competitorId = new EventEmitter;
 
+idCompetition: number = 0;
   
   constructor() { }
 
@@ -21,6 +26,12 @@ export class CompetitionComponent implements OnInit {
 
 getCompetitionId(id: number){
   console.log('competition id ', id);
-  this.idComp.emit(id);
+  this.compId.emit(id);
+  this.idCompetition = id;
+}
+getCompetitorId(id: number)
+{
+  console.log('competitor id ', id);
+  this.competitorId.emit(id);
 }
 }

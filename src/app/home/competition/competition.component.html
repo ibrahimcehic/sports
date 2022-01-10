@@ -1,6 +1,18 @@
-
+<!-- 
 <div class="list-group" *ngFor="let competition of competitions">
     <button type="button" class="list-group-item list-group-item-action" aria-current="true" (click) = "getCompetitionId(competition.id)">
       {{competition.name}}
     </button>
-  </div>
+  </div>  -->
+  <p class="text-center">Competitions</p>
+  <ngb-accordion [closeOthers]="true" #acc="ngbAccordion" activeIds="ngb-panel-0" *ngFor="let competition of competitions" (panelChange) = "getCompetitionId(competition.id)">
+    <ngb-panel [title]="competition.name" >
+        <ng-template ngbPanelContent>
+          <div class="list-group" *ngFor="let details of comDetails">
+            <button type="button" class="list-group-item list-group-item-action" aria-current="true" (click) = "getCompetitorId(details.id)">
+              {{details.name}}
+            </button>
+          </div>
+        </ng-template>
+    </ngb-panel>
+  </ngb-accordion>

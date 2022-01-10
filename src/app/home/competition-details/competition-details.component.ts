@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
+import { ICompDet } from 'src/app/shared/models/competition-details';
+import { EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-competition-details',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompetitionDetailsComponent implements OnInit {
 
+  @Input() comDetails: ICompDet[] = [];
+  @Output() idComDet = new EventEmitter;
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  getCompDetId(id: number){
+    console.log('competition id ', id);
+   this.idComDet.emit(id);
+  }
 }

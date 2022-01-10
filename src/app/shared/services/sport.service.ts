@@ -5,6 +5,9 @@ import { ISport } from '../models/sport';
 import { ICatergory } from '../models/category';
 import { ICompetition } from '../models/competition';
 import { ICompDet } from '../models/competition-details';
+import { IPlayers } from '../models/players';
+import { IPlayer } from '../models/player';
+import { ICountry } from '../models/country';
 
 @Injectable({
   providedIn: 'root'
@@ -24,5 +27,14 @@ export class SportService {
   }
   getCompetitionDetais(idComDet: number): Observable<ICompDet[]>{
     return this.http.get<ICompDet[]>(this.url + '/Competitor/competition/' + idComDet)
+  }
+  getPlayers(idP: number): Observable<IPlayers[]>{
+    return this.http.get<IPlayers[]>(this.url + '/Player/competitor/' + idP)
+  }
+  getPlayer(idPlayer: number): Observable<IPlayer>{
+    return this.http.get<IPlayer>(this.url + '/Player/' + idPlayer)
+  }
+  getCountry(idCountry: number): Observable<ICountry>{
+    return this.http.get<ICountry>(this.url + '/Country/' + idCountry)
   }
 }

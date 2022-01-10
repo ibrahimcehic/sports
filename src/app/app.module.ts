@@ -12,6 +12,8 @@ import { NavbarComponent } from './home/navbar/navbar.component';
 import { CategoryComponent } from './home/category/category.component';
 import { CompetitionComponent } from './home/competition/competition.component';
 import { CompetitionDetailsComponent } from './home/competition-details/competition-details.component';
+import { PlayersComponent } from './home/players/players.component';
+import { NgbAlertModule, NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -24,6 +26,7 @@ import { CompetitionDetailsComponent } from './home/competition-details/competit
     CategoryComponent,
     CompetitionComponent,
     CompetitionDetailsComponent,
+    PlayersComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,9 @@ import { CompetitionDetailsComponent } from './home/competition-details/competit
     CommonModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    
+    NgbModule,
+    NgbPaginationModule,
+    NgbAlertModule
     
   ],
   providers: [],

@@ -15,10 +15,11 @@
             <app-category [categories2] = "categories" (idCategory) = "competition($event)"></app-category>
         </div>
         <div class="col-3">
-          <app-competition [competitions]  = "competitions"> </app-competition>
+          <app-competition [competitions]  = "competitions" [comDetails] = "comDetails"  (compId) = "GetCompetitionDetails($event)" (competitorId) = "GetPlayers($event)"> </app-competition>
         </div>
-        <div class="col">
-            <app-competition-details></app-competition-details>
+        <div class="col-4">
+            <app-players [players] = "players" [player] = "player" [country] = "country"  (playerId) = "GetPlayer($event)" (countryId) = "GetCountry($event)"></app-players>
         </div>
+
   </div>
 
