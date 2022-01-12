@@ -16,6 +16,7 @@ export class CompetitionComponent implements OnInit {
 @Input() comDetails: ICompDet[] = [];
 @Output() compId = new EventEmitter;
 @Output() competitorId = new EventEmitter;
+@Output() activeCompetition = new EventEmitter;
 
 idCompetition: number = 0;
   
@@ -28,6 +29,7 @@ getCompetitionId(id: number){
   console.log('competition id ', id);
   this.compId.emit(id);
   this.idCompetition = id;
+  this.activeCompetition.emit();
 }
 getCompetitorId(id: number)
 {

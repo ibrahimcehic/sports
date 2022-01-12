@@ -25,12 +25,12 @@
           <button class="btn btn-outline-info dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
               Other sports
           </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"   >
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             <ng-container *ngFor="let sport of sports | slice: 7 : sports.length">                
               <li><a class="dropdown-item" href="#" (click) = "getIdFromButton(sport.id)" >{{sport.name}}</a></li>
-                </ng-container>
-           </ul>
-              </ng-container>
+            </ng-container>
+          </ul>
+        </ng-container>
       </div> 
         
   

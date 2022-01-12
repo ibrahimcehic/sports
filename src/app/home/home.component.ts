@@ -38,10 +38,11 @@ export class HomeComponent implements OnInit {
     console.log('lista', this.categories);
   }
  changeSport(sportId: number){
-  this.service.getCategory(sportId).subscribe(categories =>{this.categories = categories.sort((a,b) => a.name.localeCompare(b.name))}); 
+  this.service.getCategory(sportId).subscribe(categories =>{this.categories = categories.sort((a,b) => a.name.localeCompare(b.name))});
  }
  competition(categoryId: number){
    this.service.getCompetition(categoryId).subscribe(competitions => {this.competitions = competitions.sort((a,b)=> a.name.localeCompare(b.name))});
+   this.idCategory = categoryId;
  }
  GetCompetitionDetails(compId: number){
    this.service.getCompetitionDetais(compId).subscribe(comDetails => {this.comDetails = comDetails});
@@ -56,5 +57,13 @@ export class HomeComponent implements OnInit {
  {
    this.service.getCountry(idCountry).subscribe(country => {this.country = country})
  }
- 
+ change(){
+  this.competitions = [];
+  this.players = [];
+ }
+ change2(){
+   this.players = [];
+   console.log('change 2 radi');
+ }
+  
 }

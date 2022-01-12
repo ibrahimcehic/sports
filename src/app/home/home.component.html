@@ -1,9 +1,9 @@
-<app-navbar [sports] = "sports" (idEmit) = "changeSport($event)"></app-navbar>
+<app-navbar [sports] = "sports" (idEmit) = "changeSport($event)" (activeButton) = "change()"></app-navbar>
 
 <div class="container">
   <div class="row justify-content-md-center">
     <div class="col col-lg-2">
-      kjlj
+     
     </div>
   </div>
 </div>
@@ -12,14 +12,13 @@
     <div class="row">
         <div class="col-2 ">
           <!-- country select -->
-            <app-category [categories2] = "categories" (idCategory) = "competition($event)"></app-category>
+            <app-category [categories2] = "categories" (idCategory) = "competition($event)" (categoryActive) = "change2()"></app-category>
         </div>
-        <div class="col-3">
-          <app-competition [competitions]  = "competitions" [comDetails] = "comDetails"  (compId) = "GetCompetitionDetails($event)" (competitorId) = "GetPlayers($event)"> </app-competition>
+  <div class="col-3" >
+          <app-competition [competitions]  = "competitions" [comDetails] = "comDetails"  (compId) = "GetCompetitionDetails($event)" (competitorId) = "GetPlayers($event)" (activeCompetition) = "change2()"> </app-competition>
         </div>
         <div class="col-4">
             <app-players [players] = "players" [player] = "player" [country] = "country"  (playerId) = "GetPlayer($event)" (countryId) = "GetCountry($event)"></app-players>
         </div>
 
   </div>
-

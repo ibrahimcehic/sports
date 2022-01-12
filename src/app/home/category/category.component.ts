@@ -12,6 +12,7 @@ export class CategoryComponent implements OnInit {
 
   @Input() categories2: ICatergory[]=[];
   @Output() idCategory = new EventEmitter;
+  @Output() categoryActive = new EventEmitter();
 
   constructor() { }
 
@@ -20,5 +21,7 @@ export class CategoryComponent implements OnInit {
   getIdFromCategory(id: number){
     console.log('idCategory', id);
     this.idCategory.emit(id);
+    this.categoryActive.emit();
+     
   }
 }

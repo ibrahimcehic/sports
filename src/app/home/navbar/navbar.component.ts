@@ -13,6 +13,7 @@ export class NavbarComponent implements OnInit {
 
 @Input() sports: ISport[] = [];
 @Output() idEmit = new EventEmitter;
+@Output() activeButton = new EventEmitter<boolean>();
 
 categories: ICatergory[] = [];
 
@@ -25,6 +26,6 @@ categories: ICatergory[] = [];
       console.log('idSport', id)
     
     this.idEmit.emit(id);
-   
+   this.activeButton.emit(true);
   }
 }
